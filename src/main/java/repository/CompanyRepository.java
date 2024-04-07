@@ -1,5 +1,6 @@
 package repository;
 
+import model.Client;
 import model.Company;
 
 import java.util.ArrayList;
@@ -31,6 +32,8 @@ public class CompanyRepository implements ClientRepository<Company> {
 
     @Override
     public Company create(Company client) {
+        companys.add(client);
+
         return null;
     }
 
@@ -41,11 +44,19 @@ public class CompanyRepository implements ClientRepository<Company> {
 
     @Override
     public Company update(Company client) {
-        return null;
+        var company = findById(client);
+        company = client;
+        return company;
     }
 
     @Override
     public Company findById(Company client) {
+        for(Company company : companys){
+            if (client.getId() == company.getId())
+                return company;
+        }
+
+
         return null;
     }
 }
