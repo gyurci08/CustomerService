@@ -17,7 +17,7 @@ public class ListServlet extends HttpServlet {
     private final CustomerRepository customerRepo = new CustomerRepository();
     private final CompanyRepository companyRepo = new CompanyRepository();
 
-    private final ArrayList<Client> clients = new ArrayList<Client>();
+    private final ArrayList<Client> clients = new ArrayList<>();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

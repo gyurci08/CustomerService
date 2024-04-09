@@ -8,8 +8,9 @@ public interface ClientRepository <T extends Client>{
 
     List<T> listAll();
     T create(T client);
+    T remove(T client);
     T save(T client);
     T update(T client);
-    T findById(T client);
+    T findById(int id);
 
 }

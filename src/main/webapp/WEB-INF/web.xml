@@ -25,5 +25,25 @@
         <url-pattern>/list</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CustomerRemoveServlet</servlet-name>
+        <servlet-class>servlet.CustomerRemoveServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CustomerRemoveServlet</servlet-name>
+        <url-pattern>/customer-remove</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CompanyRemoveServlet</servlet-name>
+        <servlet-class>servlet.CompanyRemoveServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CompanyRemoveServlet</servlet-name>
+        <url-pattern>/company-remove</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

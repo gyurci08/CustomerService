@@ -38,21 +38,27 @@ public class CompanyRepository implements ClientRepository<Company> {
     }
 
     @Override
+    public Company remove(Company client) {
+        companys.remove(this.findById(client.getId()));
+        return null;
+    }
+
+    @Override
     public Company save(Company client) {
         return null;
     }
 
     @Override
     public Company update(Company client) {
-        var company = findById(client);
+        var company = findById(client.getId());
         company = client;
         return company;
     }
 
     @Override
-    public Company findById(Company client) {
-        for(Company company : companys){
-            if (client.getId() == company.getId())
+    public Company findById(int id) {
+        for(Company company : this.companys){
+            if (id == company.getId())
                 return company;
         }
 

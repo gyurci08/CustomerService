@@ -30,6 +30,13 @@
                 <td>
                     <c:out value="${client.address}"/>
                 </td>
+                <td>
+                    <form method="post"
+                          action="${pageContext.request.contextPath}/customer-remove">
+                        <input type="hidden" name="id" value="${client.id}">
+                        <input type="submit" value="Remove">
+                    </form>
+                </td>
             </tr>
         </c:forEach>
         </tbody>
